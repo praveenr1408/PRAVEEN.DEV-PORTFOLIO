@@ -13,11 +13,11 @@ import BorderButton from "../../../../components/common/Button/BorderButton";
 export default function HeroSection() {
   return (
     // Hero main section
-    <section className="w-full md:h-screen px-6 md:px-10 lg:px-26 py-10 md:py-0 bg-black relative -z-2">
+    <section className="w-full md:h-screen px-6 md:px-10 lg:px-26 py-10 md:py-0 bg-black relative z-0">
       {/* Hero container section */}
-      <section className="container mx-auto h-full flex items-center z-1">
+      <section className="container mx-auto h-full flex items-center">
         {/* Wrap Content and Image section */}
-        <div className="w-full flex flex-col-reverse md:flex-row gap-y-16 md:gap-y-0">
+        <div className="w-full flex flex-col-reverse md:flex-row gap-y-16 md:gap-y-0 z-2">
           {/* Content section */}
           <div className="w-full md:w-1/2 space-y-6 md:space-y-6 flex flex-col items-center md:items-start">
             <h2 className="text-2xl md:text-3xl font-semibold text-white flex items-center gap-x-4">
@@ -67,9 +67,9 @@ export default function HeroSection() {
               {/* Button component */}
               <BorderButton icon={<BriefcaseBusiness />} label="Hire Me!" />
               <div className="text-white flex items-center gap-x-4">
-                <Linkedin className="hover:text-main" />
-                <Github className="hover:text-main" />
-                <Mail className="hover:text-main" />
+                <Linkedin className="hover:text-main cursor-pointer" />
+                <Github className="hover:text-main cursor-pointer" />
+                <Mail className="hover:text-main cursor-pointer" />
               </div>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function HeroSection() {
       </section>
 
       {/* Wave divider */}
-      <div className="absolute -bottom-1 left-0 w-full rotate-180 overflow-hidden">
+      <div className="absolute -bottom-1 left-0 w-full rotate-180 overflow-hidden z-3">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
           <g fill="#FFFFFF">
             <path d="M0 0v74.7C62 44 122.4 28.7 205 46c83.8 17.6 160.5 25.4 240-7 54-22 110-21 173-5 76.5 19.4 146.5 23.3 222 0 55-17 110.3-31.9 160-22.2V0H0Z"></path>
@@ -138,9 +138,9 @@ export default function HeroSection() {
       </div>
 
       {/* Wrap grid lines and radial gradient */}
-      <div>
-        <div className="absolute opacity-50 -z-1 inset-0 [background-size:50px_50px] [background-image:linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] "></div>
-        <div className="pointer-events-none -z-1 absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)] md:bg-black"></div>
+      <div className="pointer-events-none absolute inset-0 z-1">
+        <div className="absolute opacity-50 inset-0 [background-size:50px_50px] [background-image:linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] "></div>
+        <div className="absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)] md:bg-black"></div>
       </div>
     </section>
   );
