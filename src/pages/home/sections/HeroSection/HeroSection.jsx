@@ -1,14 +1,14 @@
 import React from "react";
-import Praveen from "../../../assets/images/Praveen.png";
-import HTMLIcon from "../../../assets/icons/html.png";
-import CSSIcon from "../../../assets/icons/css.png";
-import JSIcon from "../../../assets/icons/js.png";
-import ReactIcon from "../../../assets/icons/react.png";
+import Praveen from "../../../../assets/images/Praveen.png";
+import HTMLIcon from "../../../../assets/icons/html.png";
+import CSSIcon from "../../../../assets/icons/css.png";
+import JSIcon from "../../../../assets/icons/js.png";
+import ReactIcon from "../../../../assets/icons/react.png";
 import Typewriter from "typewriter-effect";
 import { BriefcaseBusiness, Linkedin, Github, Mail } from "lucide-react";
 import { MdWavingHand } from "react-icons/md";
-import { motion, AnimatePresence } from "framer-motion";
-import BorderButton from "../../../components/common/Button/BorderButton";
+import { motion } from "framer-motion";
+import BorderButton from "../../../../components/common/Button/BorderButton";
 
 export default function HeroSection() {
   return (
