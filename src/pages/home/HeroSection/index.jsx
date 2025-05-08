@@ -13,9 +13,9 @@ import BorderButton from "../../../components/common/Button/BorderButton";
 export default function HeroSection() {
   return (
     // Hero main section
-    <section className="w-full md:h-screen px-6 md:px-10 lg:px-26 py-10 md:py-0 bg-black relative">
+    <section className="w-full md:h-screen px-6 md:px-10 lg:px-26 py-10 md:py-0 bg-black relative -z-2">
       {/* Hero container section */}
-      <section className="container mx-auto h-full flex items-center">
+      <section className="container mx-auto h-full flex items-center z-1">
         {/* Wrap Content and Image section */}
         <div className="w-full flex flex-col-reverse md:flex-row gap-y-16 md:gap-y-0">
           {/* Content section */}
@@ -135,6 +135,12 @@ export default function HeroSection() {
             points="-30,300 355.167,210.5 1432.5,290 1920,198.5 1920,300"
           ></polygon>
         </svg> */}
+      </div>
+
+      {/* Wrap grid lines and radial gradient */}
+      <div>
+        <div className="absolute opacity-50 -z-1 inset-0 [background-size:50px_50px] [background-image:linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] "></div>
+        <div className="pointer-events-none -z-1 absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)] md:bg-black"></div>
       </div>
     </section>
   );
