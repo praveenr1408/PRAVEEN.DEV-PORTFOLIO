@@ -8,7 +8,10 @@ import RadialProgress from "../../../../components/home/SkillSection/RadialProgr
 export default function SkillSection() {
   return (
     // Main section for the Skills & Expertise
-    <section className="w-full px-6 md:px-10 lg:px-26 py-10 md:py-14 bg-white">
+    <section
+      id="skills"
+      className="w-full px-6 md:px-10 lg:px-26 py-10 md:py-14 bg-white"
+    >
       {/* Container for the skill section */}
       <section className="container mx-auto h-full flex items-center">
         {/* Wrapper for heading and skill details */}

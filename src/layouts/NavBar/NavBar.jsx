@@ -10,10 +10,11 @@ import {
 } from "lucide-react";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-scroll";
 
 const menuItems = [
-  { item: "About", icon: <User />, link: "#" },
-  { item: "Skills", icon: <Code />, link: "#" },
+  { item: "About", icon: <User />, link: "about" },
+  { item: "Skills", icon: <Code />, link: "skills" },
   { item: "Projects", icon: <FolderOpenDot />, link: "#" },
   { item: "Educaion", icon: <GraduationCap />, link: "#" },
   { item: "Contact", icon: <Phone />, link: "#" },
@@ -32,10 +33,22 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo and Name section */}
           <div className="flex space-x-4 items-center">
-            <Webhook className="animate-spin" size={36} />
-            <h1 className="hidden md:block font-bold tracking-wide">
+            <Link
+              to="hero" // Scroll to Hero Section
+              smooth={true}
+              duration={500}
+            >
+              <Webhook className="animate-spin" size={36} />
+            </Link>
+
+            <Link
+              to="hero" // Scroll to Hero Section
+              smooth={true}
+              duration={500}
+              className="hidden md:block font-bold tracking-wide cursor-pointer"
+            >
               PRAVEEN.DEV
-            </h1>
+            </Link>
           </div>
 
           {/* Menu section for large screen*/}
@@ -43,11 +56,18 @@ export default function Navbar() {
             <ul className="hidden lg:flex space-x-10">
               {menuItems.map((menuItem, index) => (
                 <li
-                  className="hover:text-main transition-colors duration-500"
+                  className="hover:text-main transition-colors duration-500 cursor-pointer"
                   key={index}
                   onClick={() => setToggle(false)}
                 >
-                  <a href={menuItem.link}>{menuItem.item}</a>
+                  <Link
+                    to={menuItem.link} // Scroll to destination section
+                    smooth={true}
+                    duration={500}
+                    offset={-55} // Offset
+                  >
+                    {menuItem.item}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -99,18 +119,19 @@ export default function Navbar() {
             >
               <ul className="space-y-8">
                 {menuItems.map((menuItem, index) => (
-                  <li
-                    className="hover:text-main"
-                    key={index}
-                    onClick={() => setToggle(false)}
-                  >
-                    <a
+                  <li className="hover:text-main" key={index}>
+                    <Link
+                      to={menuItem.link} // Scroll to destination section
+                      smooth={true}
+                      duration={500}
+                      offset={-55} // Offset
                       className="flex items-center gap-x-4"
                       href={menuItem.link}
+                      onClick={() => setToggle(!toggle)}
                     >
                       <span>{menuItem.icon}</span>
                       {menuItem.item}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

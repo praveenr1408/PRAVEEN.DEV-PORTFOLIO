@@ -13,7 +13,10 @@ import BorderButton from "../../../../components/common/Button/BorderButton";
 export default function HeroSection() {
   return (
     // Hero main section
-    <section className="w-full md:h-screen px-6 md:px-10 lg:px-26 py-10 md:py-0 bg-black relative z-0">
+    <section
+      id="hero"
+      className="w-full md:h-screen px-6 md:px-10 lg:px-26 py-10 md:py-0 bg-black relative z-0"
+    >
       {/* Hero container section */}
       <section className="container mx-auto h-full flex items-center">
         {/* Wrap Content and Image section */}

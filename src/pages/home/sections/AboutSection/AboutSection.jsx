@@ -5,7 +5,10 @@ import { Download } from "lucide-react";
 export default function AboutSection() {
   return (
     // Anout Main section
-    <section className="w-full px-6 md:px-10 lg:px-26 py-10 md:py-14 bg-white">
+    <section
+      id="about"
+      className="w-full px-6 md:px-10 lg:px-26 py-10 md:py-14 bg-white"
+    >
       {/* About container section */}
       <section className="container mx-auto h-full flex items-center">
         {/* Wrap Heading division and Image, content division */}
