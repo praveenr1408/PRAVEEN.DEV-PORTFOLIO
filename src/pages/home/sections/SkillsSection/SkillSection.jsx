@@ -3,7 +3,7 @@ import {
   frontendSkills,
   tools,
 } from "../../../../utils/home/skillSection/constants"; // Importing skill data
-import RadialProgress from "../../../../components/home/SkillSection/RadialProgress/RadialProgress"; // Importing RadialProgress component
+import RadialProgress from "../../../../components/home/SkillSection/RadialProgress"; // Importing RadialProgress component
 
 export default function SkillSection() {
   return (
