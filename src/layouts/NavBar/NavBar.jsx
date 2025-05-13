@@ -56,7 +56,7 @@ export default function Navbar() {
             <ul className="hidden lg:flex space-x-10">
               {menuItems.map((menuItem, index) => (
                 <li
-                  className="hover:text-main transition-colors duration-500 cursor-pointer"
+                  className="hover:text-main transition-colors duration-500 cursor-pointer font-semibold"
                   key={index}
                   onClick={() => setToggle(false)}
                 >
@@ -65,6 +65,8 @@ export default function Navbar() {
                     smooth={true}
                     duration={500}
                     offset={-55} // Offset
+                    spy={true}
+                    activeClass="text-main transition-colors duration-500" // Apply this class when active
                   >
                     {menuItem.item}
                   </Link>
@@ -126,7 +128,6 @@ export default function Navbar() {
                       duration={500}
                       offset={-55} // Offset
                       className="flex items-center gap-x-4"
-                      href={menuItem.link}
                       onClick={() => setToggle(!toggle)}
                     >
                       <span>{menuItem.icon}</span>
