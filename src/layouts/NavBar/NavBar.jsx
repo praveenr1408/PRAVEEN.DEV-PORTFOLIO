@@ -16,8 +16,8 @@ const menuItems = [
   { item: "About", icon: <User />, link: "about" },
   { item: "Skills", icon: <Code />, link: "skills" },
   { item: "Projects", icon: <FolderOpenDot />, link: "#" },
-  { item: "Educaion", icon: <GraduationCap />, link: "#" },
-  { item: "Contact", icon: <Phone />, link: "#" },
+  { item: "Education", icon: <GraduationCap />, link: "#" },
+  { item: "Contact", icon: <Phone />, link: "contact" },
 ];
 
 export default function Navbar() {
