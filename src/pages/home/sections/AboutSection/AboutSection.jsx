@@ -3,6 +3,9 @@ import Praveen from "../../../../assets/images/Praveen.png";
 import { Download } from "lucide-react";
 
 export default function AboutSection() {
+  const handlePreviewClick = () => {
+    window.open("/assets/Resume/Praveen-R.pdf", "_blank");
+  };
   return (
     // Anout Main section
     <section
@@ -33,23 +36,24 @@ export default function AboutSection() {
             <div className="w-full md:w-1/2 md:px-10 flex flex-col justify-center items-center gap-y-6">
               <div className="w-full">
                 <p className="text-justify text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                  iusto molestiae ab ducimus commodi, nobis illum obcaecati
-                  minus ullam hic rem cum soluta dignissimos fugit asperiores
-                  odit animi facilis nemo!Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Rerum iusto molestiae ab ducimus commodi,
-                  nobis illum obcaecati minus ullam hic rem cum soluta
-                  dignissimos fugit asperiores odit animi facilis nemo!Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Rerum iusto
-                  molestiae ab ducimus commodi, nobis illum obcaecati minus
-                  ullam hic rem cum soluta dignissimos fugit asperiores odit
-                  animi facilis nemo!
+                  I am currently pursuing a BSc in Computer Science, which
+                  provides me with a strong foundation in programming and
+                  problem-solving. Alongside my academic journey, I have
+                  developed skills as a Front-End Developer, UI designer, and
+                  graphic designer. I enjoy blending creativity with technology
+                  to build visually appealing, responsive, and user-friendly
+                  websites and applications. I am passionate about learning new
+                  technologies and continuously improving my craft to create
+                  impactful digital experiences.
                 </p>
               </div>
 
               {/* Button division */}
               <div className="w-full flex justify-center">
-                <button className="w-full flex justify-center items-center gap-x-2 bg-main py-4 rounded-sm hover:bg-black hover:text-white transition-all duration-200 hover:-skew-2">
+                <button
+                  onClick={handlePreviewClick}
+                  className="w-full flex justify-center items-center gap-x-2 bg-main py-4 rounded-sm text-white hover:bg-black hover:text-white transition-all duration-200 hover:-skew-2"
+                >
                   Dowload Resume
                   <span>
                     <Download />

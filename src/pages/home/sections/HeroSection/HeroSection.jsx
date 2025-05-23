@@ -60,10 +60,12 @@ export default function HeroSection() {
 
             {/* Description */}
             <p className="text-justify text-gray-400 leading-8">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum,
-              tempora architecto assumenda fuga, corporis delectus perspiciatis
-              accusamus a tenetur vitae ullam nobis, veritatis magni nemo. Ea
-              amet optio consectetur perferendis! perferendis!
+              I am a passionate Front-End Developer, UI designer, and graphic
+              designer with a keen eye for detail and a love for creating
+              visually appealing, user-friendly digital experiences. From
+              designing intuitive interfaces to crafting clean, responsive web
+              applications, I blend creativity with technical skills to bring
+              ideas to life.
             </p>
             {/* Wrap Button and Social media */}
             <div className="flex flex-col md:flex-row items-center md:gap-x-4 gap-y-6">
