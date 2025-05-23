@@ -13,11 +13,13 @@ import {
   GithubIcon,
 } from "lucide-react";
 import { Link } from "react-scroll";
+
+// Footer navigation menu items with icons and scroll links
 const menuItems = [
   { item: "About", icon: <User />, link: "about" },
   { item: "Skills", icon: <Code />, link: "skills" },
-  { item: "Projects", icon: <FolderOpenDot />, link: "#" },
-  { item: "Education", icon: <GraduationCap />, link: "#" },
+  { item: "Projects", icon: <FolderOpenDot />, link: "#" }, // Placeholder link
+  { item: "Education", icon: <GraduationCap />, link: "#" }, // Placeholder link
   { item: "Contact", icon: <Phone />, link: "contact" },
 ];
 
@@ -25,10 +27,11 @@ export default function Footer() {
   return (
     // Footer Main Section
     <footer className="w-full relative px-6 md:px-10 lg:px-26 py-15 md:py-40 bg-black text-white">
-      {/* Footer Conatiner Section */}
+      {/* Footer Container Section */}
       <section className="container mx-auto h-full flex items-center justify-center">
-        {/* Wrap Footer Nav and Social media icons */}
+        {/* Wrapper for Footer Nav and Social Media Icons */}
         <div className="flex flex-col gap-y-8 items-center">
+          {/* Logo/Brand Name */}
           <div>
             <Link
               to="hero" // Scroll to Hero Section
@@ -40,6 +43,7 @@ export default function Footer() {
             </Link>
           </div>
 
+          {/* Footer Navigation Menu */}
           <nav>
             <ul className="flex flex-col md:flex-row items-center gap-y-6 md:gap-y-0 gap-x-10">
               {menuItems.map((menuItem, index) => (
@@ -51,7 +55,7 @@ export default function Footer() {
                     to={menuItem.link} // Scroll to destination section
                     smooth={true}
                     duration={500}
-                    offset={-55} // Offset
+                    offset={-55} // Offset for scroll position
                   >
                     {menuItem.item}
                   </Link>
@@ -60,6 +64,7 @@ export default function Footer() {
             </ul>
           </nav>
 
+          {/* Social Media and Contact Icons */}
           <div className="flex gap-x-8">
             <a
               className="hover:text-main transition-colors duration-300"
@@ -67,21 +72,18 @@ export default function Footer() {
             >
               <Phone />
             </a>
-
             <a
               className="hover:text-main transition-colors duration-300"
               href="#"
             >
               <Mail />
             </a>
-
             <a
               className="hover:text-main transition-colors duration-300"
               href="#"
             >
               <Linkedin />
             </a>
-
             <a
               className="hover:text-main transition-colors duration-300"
               href="#"
@@ -90,11 +92,13 @@ export default function Footer() {
             </a>
           </div>
 
+          {/* Copyright Text */}
           <div>
             <p className="text-main">© Copyrights All rights reserved</p>
           </div>
         </div>
       </section>
+      {/* Decorative SVG Wave at the Top of Footer */}
       <div className="absolute w-full top-0 left-0 ">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
           <g fill="#FFFFFF">

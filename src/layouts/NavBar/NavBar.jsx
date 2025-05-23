@@ -16,7 +16,7 @@ const menuItems = [
   { item: "About", icon: <User />, link: "about" },
   { item: "Skills", icon: <Code />, link: "skills" },
   { item: "Projects", icon: <FolderOpenDot />, link: "#" },
-  { item: "Education", icon: <GraduationCap />, link: "#" },
+  { item: "Education", icon: <GraduationCap />, link: "education" },
   { item: "Contact", icon: <Phone />, link: "contact" },
 ];
 
